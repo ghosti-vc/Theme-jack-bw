@@ -1,10 +1,10 @@
 {
   "id": "theme-jack-bw",
   "name": "Tema Jack",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "apiVersion": 18,
   "entry": "plugin.js",
-  "description": "Tema blanco y negro con la cara de Jack",
+  "description": "Tema blanco y negro donde la «o» de Kino es la cara de Jack",
   "hosts": [],
   "categories": ["themes"],
   "appThemes": [
@@ -25,48 +25,36 @@
         "onFocus": "#000000",
         "border": "#FFFFFF"
       },
+      "background": { "type": "gradient", "colors": ["#000000", "#232323", "#000000"], "angle": 135 },
       "shape": {
-        "cardRadius": 22,
-        "channelRadius": 22,
-        "buttonRadius": 24,
-        "chipRadius": 20,
-        "dialogRadius": 26,
-        "inputRadius": 14,
-        "cardBorder": 1,
+        "cardRadius": 16,
+        "channelRadius": 16,
+        "buttonRadius": 20,
+        "chipRadius": 16,
+        "dialogRadius": 20,
+        "inputRadius": 12,
+        "cardBorder": 2,
         "headerBorder": 1,
         "panelBorder": 1,
         "menuBorder": 1,
         "dialogBorder": 2
       },
+      "elevation": { "cardShadow": 1, "dialogShadow": 1 },
+      "motion": { "focusZoom": 1.08, "crossfadeMs": 400, "heroDrift": "on" },
       "typography": { "scale": 1.05, "titleScale": 1.05, "bodyScale": 1.0 },
       "logo": {
-        "mark": {
-          "size": [30, 30],
-          "paths": [
-            { "d": "M15 1 C23 1 27 7 27 15 C27 23 23 29 15 29 C7 29 3 23 3 15 C3 7 7 1 15 1 Z", "fill": "#F5F5F5" },
-            { "d": "M10 7 C12.5 7 13.5 9 13.5 12 C13.5 15 12.5 17 10 17 C7.5 17 6.5 15 6.5 12 C6.5 9 7.5 7 10 7 Z M20 7 C22.5 7 23.5 9 23.5 12 C23.5 15 22.5 17 20 17 C17.5 17 16.5 15 16.5 12 C16.5 9 17.5 7 20 7 Z", "fill": "#0E0E0E" },
-            { "d": "M15 18.5 L16.5 21 H13.5 Z", "fill": "#0E0E0E" },
-            { "d": "M7 20.5 C10 26.5 20 26.5 23 20.5 C20 25 10 25 7 20.5 Z M11.4 22.4 L11.1 24.6 L12.3 24.7 Z M15 23.6 L15 25.9 L16 25.9 L16 23.6 Z M18.7 22.4 L17.8 24.7 L19 24.6 Z", "fill": "#0E0E0E" }
-          ]
-        },
-        "wordmark": {
-          "size": [120, 30],
-          "paths": [
-            { "d": "M8 9 L19 14 L8 19 Z M32 9 L21 14 L32 19 Z M17.5 11 H22.5 V19 H17.5 Z", "fill": "accent" },
-            { "d": "M40 5 H47 V20 C47 24 44 27 40 27 L40 23 C43 23 43 22 43 20 V9 H40 Z", "fill": "textPrimary" },
-            { "d": "M50 26 H54 L55.5 21 H61.5 L63 26 H67 L62 5 H55 Z", "fill": "textPrimary" },
-            { "d": "M80 5 H71 C66 5 63 9 63 15 C63 21 66 26 71 26 H80 V22 H71 C69 22 67.5 19 67.5 15 C67.5 11 69 9 71 9 H80 Z", "fill": "textPrimary" },
-            { "d": "M85 5 H89 V12 L94 5 H99 L92.5 13 L99 26 H94 L89 18 V26 H85 Z", "fill": "textPrimary" }
-          ]
-        },
         "decor": {
           "paths": [
-            { "d": "M-60 -37 L-5 0 L-60 37 Z M60 -37 L5 0 L60 37 Z M-8 -7 H8 V7 H-8 Z", "fill": "#0E0E0E" }
+            { "d": "M-100 0 A100 100 0 1 0 100 0 A100 100 0 1 0 -100 0 Z", "fill": "#F5F5F5" },
+            { "d": "M-57 -15 A22 30 0 1 0 -13 -15 A22 30 0 1 0 -57 -15 Z M13 -15 A22 30 0 1 0 57 -15 A22 30 0 1 0 13 -15 Z", "fill": "#0E0E0E" },
+            { "d": "M0 22 L9 40 H-9 Z", "fill": "#0E0E0E" },
+            { "d": "M-55 52 C-30 82 30 82 55 52 C30 72 -30 72 -55 52 Z", "fill": "#0E0E0E" },
+            { "d": "M-33 58 H-29 V76 H-33 Z M-11 66 H-7 V82 H-11 Z M7 66 H11 V82 H7 Z M29 58 H33 V76 H29 Z", "fill": "#0E0E0E" }
           ]
         }
       },
       "adjustable": {
-        "colors.accent": { "swatches": ["#FFFFFF", "#D9D9D9", "#A6A6A6"] },
+        "colors.accent": { "swatches": ["#FFFFFF", "#FF6A00", "#D9D9D9", "#A6A6A6"] },
         "shape.cardRadius": { "min": 0, "max": 32 },
         "typography.scale": { "min": 1.0, "max": 1.2 },
         "background": true
