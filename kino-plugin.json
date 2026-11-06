@@ -1,57 +1,68 @@
 {
-  "id": "own-server",
-  "name": "Tu servidor",
-  "version": "1.5.0",
-  "apiVersion": 7,
+  "id": "theme-jack-bw",
+  "name": "Tema Jack",
+  "version": "1.0.0",
+  "apiVersion": 18,
   "entry": "plugin.js",
-  "description": "Ve el contenido de tu propio servidor de video, con sus canales y subtítulos, y cuéntale qué ves. Necesita que escribas su dirección.",
-  "author": "kinotvapp",
-  "homepage": "https://github.com/kinotvapp/kino-plugin-own-server",
+  "description": "Tema blanco y negro con la cara de Jack",
   "hosts": [],
-  "capabilities": [
-    "search",
-    "home",
-    "browse",
-    "episodes",
-    "resolve",
-    "download",
-    "channels",
-    "scopedSearch",
-    "migrate",
-    "meta",
-    "subtitles",
-    "tracking",
-    "segments"
-  ],
-  "categories": ["movies", "series", "live", "subtitles", "utilities"],
-  "discoverable": true,
-  "debug": false,
-  "telemetry": true,
-  "section": { "label": "Tu servidor" },
-  "theme": { "accent": "#2BB68F", "onAccent": "#06201A", "background": "#0B1513", "surface": "#15241F", "highlight": "#E8F5F0" },
-  "settings": [
-    { "key": "cuenta", "label": "Tu servidor", "type": "section", "hint": "Escribe la dirección de tu servidor (Jellyfin, Emby, un NAS…) tal como la abres en el navegador de tu casa, con su puerto, y tu usuario y contraseña de ese servidor. Kino solo se conecta a esa dirección y a las otras que pongas abajo." },
-    { "key": "server", "label": "Servidor", "type": "url", "required": true, "hint": "http://192.168.1.10:8096" },
-    { "key": "user", "label": "Usuario", "type": "text", "required": true },
-    { "key": "password", "label": "Contraseña", "type": "password", "required": true },
-    { "key": "estado", "label": "Conexión", "type": "status" },
-    { "key": "probar", "label": "Probar conexión", "type": "action" },
-    { "key": "salir", "label": "Cerrar sesión", "type": "action", "confirm": "¿Cerrar la sesión en tu servidor? Kino vuelve a entrar con tu usuario la próxima vez." },
-    { "key": "reproduccion", "label": "Reproducción", "type": "section", "hint": "Cómo pedir los videos y cada cuánto revisar lo nuevo de tu servidor." },
-    { "key": "hd", "label": "Solo HD", "type": "toggle" },
-    { "key": "homeTtl", "label": "Revisar lo nuevo", "type": "select", "default": "15",
-      "options": [{ "value": "5", "label": "Cada 5 minutos" }, { "value": "15", "label": "Cada 15 minutos" }, { "value": "60", "label": "Cada hora" }] },
-    { "key": "addresses", "label": "Otras direcciones del mismo servidor", "type": "list", "max": 5,
-      "fields": [
-        { "key": "url", "label": "Dirección", "type": "url", "required": true, "hint": "https://mi-servidor.example.org" },
-        { "key": "label", "label": "Nombre", "type": "text", "hint": "Desde fuera de casa" }
-      ] },
-    { "key": "canales", "label": "Canales en vivo", "type": "section", "hint": "Algunos canales solo responden a un reproductor conocido: escribe aquí el User-Agent que piden." },
-    { "key": "userAgent", "label": "User-Agent de los canales", "type": "text", "hint": "VLC/3.0.20 LibVLC/3.0.20" },
-    { "key": "quitarAgente", "label": "Usar el User-Agent de Kino", "type": "action" },
-    { "key": "avisos", "label": "Lo que ves", "type": "section", "hint": "Kino le cuenta a tu servidor qué ves en este aparato y cuándo lo terminas, para que marque lo visto como lo hace su propia app. Apágalo cuando quieras con el interruptor «Enviar lo que veo» de esta misma pestaña." },
-    { "key": "ultimoAviso", "label": "Último aviso", "type": "status" }
-  ],
-  "color": "#1F8A70",
-  "icon": "icon.png"
+  "categories": ["themes"],
+  "appThemes": [
+    {
+      "id": "jack-bw",
+      "name": { "es": "Tema Jack", "en": "Jack Theme" },
+      "experience": "light",
+      "colors": {
+        "accent": "#FFFFFF",
+        "onAccent": "#000000",
+        "background": "#000000",
+        "surface": "#141414",
+        "surfaceHigh": "#1F1F1F",
+        "textPrimary": "#FFFFFF",
+        "textSecondary": "#B3B3B3",
+        "focus": "#FFFFFF",
+        "onFocus": "#000000",
+        "border": "#FFFFFF"
+      },
+      "shape": {
+        "cardRadius": 0,
+        "channelRadius": 0,
+        "buttonRadius": 0,
+        "chipRadius": 0,
+        "dialogRadius": 0,
+        "inputRadius": 0,
+        "cardBorder": 1,
+        "headerBorder": 1
+      },
+      "typography": { "scale": 1.05, "titleScale": 1.05, "bodyScale": 1.0 },
+      "logo": {
+        "mark": {
+          "size": [30, 30],
+          "paths": [
+            { "d": "M15 1 C23 1 27 7 27 15 C27 23 23 29 15 29 C7 29 3 23 3 15 C3 7 7 1 15 1 Z", "fill": "#F5F5F5" },
+            { "d": "M10 8.5 C12 8.5 13.2 10.5 13.2 13 C13.2 15.5 12 17.5 10 17.5 C8 17.5 6.8 15.5 6.8 13 C6.8 10.5 8 8.5 10 8.5 Z", "fill": "#0E0E0E" },
+            { "d": "M20 8.5 C22 8.5 23.2 10.5 23.2 13 C23.2 15.5 22 17.5 20 17.5 C18 17.5 16.8 15.5 16.8 13 C16.8 10.5 18 8.5 20 8.5 Z", "fill": "#0E0E0E" },
+            { "d": "M15 18 L16.8 21 H13.2 Z", "fill": "#0E0E0E" },
+            { "d": "M7 20 C10 26 20 26 23 20 C20 24 10 24 7 20 Z", "fill": "#0E0E0E" }
+          ]
+        },
+        "wordmark": {
+          "size": [120, 30],
+          "paths": [
+            { "d": "M8 9 L19 14 L8 19 Z M32 9 L21 14 L32 19 Z M17.5 11 H22.5 V19 H17.5 Z", "fill": "accent" },
+            { "d": "M40 5 H47 V20 C47 24 44 27 40 27 L40 23 C43 23 43 22 43 20 V9 H40 Z", "fill": "textPrimary" },
+            { "d": "M50 26 H54 L55.5 21 H61.5 L63 26 H67 L62 5 H55 Z", "fill": "textPrimary" },
+            { "d": "M80 5 H71 C66 5 63 9 63 15 C63 21 66 26 71 26 H80 V22 H71 C69 22 67.5 19 67.5 15 C67.5 11 69 9 71 9 H80 Z", "fill": "textPrimary" },
+            { "d": "M85 5 H89 V12 L94 5 H99 L92.5 13 L99 26 H94 L89 18 V26 H85 Z", "fill": "textPrimary" }
+          ]
+        }
+      },
+      "adjustable": {
+        "colors.accent": { "swatches": ["#FFFFFF", "#D9D9D9", "#A6A6A6"] },
+        "shape.cardRadius": { "min": 0, "max": 16 },
+        "typography.scale": { "min": 1.0, "max": 1.2 },
+        "background": true
+      }
+    }
+  ]
 }
